@@ -23,7 +23,6 @@ app.use(express.json());
 app.use(
   cors({
     origin: "http://localhost:3000",
-    // origin: "https://social-api.onrender.com",
   })
 );
 app.use(cookieParser());
@@ -52,6 +51,12 @@ app.use("/api/likes", likeRoutes);
 app.use("/api/stories", storyRoutes);
 app.use("/api/relationships", relationshipRoutes);
 
-app.listen(8800, () => {
-  console.log("API working!");
+// app.listen(8800, () => {
+//   console.log("API working!");
+// });
+
+const PORT = 8800;
+
+app.listen(PORT, "127.0.0.1", () => {
+  console.log(`Server is running at http://127.0.0.1:${PORT}`);
 });
