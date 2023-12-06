@@ -58,7 +58,7 @@ export const login = (req, res) => {
 
     res
       .cookie("accessToken", token, {
-        httpOnly: true,
+        httpOnly: false,
       })
       .status(200)
       .json(others);
