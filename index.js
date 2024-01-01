@@ -51,6 +51,8 @@ app.use("/api/likes", likeRoutes);
 app.use("/api/stories", storyRoutes);
 app.use("/api/relationships", relationshipRoutes);
 
-app.listen(process.env.PORT || 8800, () => {
-  console.log("Backend working!");
+const PORT = 8800;
+
+app.listen(process.env.PORT || PORT, () => {
+  console.log(`Server running on port ${PORT}`);
 });
