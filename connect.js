@@ -6,7 +6,7 @@ export const db = mysql.createConnection({
   user: "root",
   password: "Sameer@614",
   database: "social",
-  // port: 3306,
+  port: 3306,
   // authPlugin: "caching_sha2_password",
 });
 
